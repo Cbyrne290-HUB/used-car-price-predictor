@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+testenv/
+
+# Secrets / credentials  (NEVER commit these)
+.env
+*.env
+kaggle.json
+.streamlit/secrets.toml
+
+# OS
+.DS_Store
+Thumbs.db
