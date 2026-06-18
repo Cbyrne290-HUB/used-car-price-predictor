@@ -1,17 +1,15 @@
-"""Helpers for loading data and the trained ML pipeline into the dashboard."""
-import joblib
-import pandas as pd
 import streamlit as st
+import pandas as pd
+import joblib
 
 
 @st.cache_data
-def load_cleaned_data(
-    path: str = "outputs/datasets/cleaned/used_cars_cleaned.csv",
-) -> pd.DataFrame:
-    """Load the cleaned dataset used across the dashboard pages."""
-    return pd.read_csv(path)
+def load_clean_data():
+    """Load the cleaned used-car dataset (cached)."""
+    return pd.read_csv("outputs/datasets/cleaned/used_cars_cleaned.csv")
 
 
-def load_pipeline(path: str):
-    """Load a saved scikit-learn pipeline (.pkl) from a versioned outputs folder."""
-    return joblib.load(path)
+@st.cache_resource
+def load_price_pipeline():
+    """Load the trained price-prediction pipeline (cached)."""
+    return joblib.load("outputs/ml_pipeline/predict_price/v1/pipeline.pkl")
