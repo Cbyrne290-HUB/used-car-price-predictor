@@ -8,6 +8,8 @@ from 97,442 real UK used-car listings to (1) explain which attributes drive a ca
 **Repository:** https://github.com/Cbyrne290-HUB/used-car-price-predictor
 **Author:** Callum Byrne
 
+![Used Car Price Predictor — Project Summary page](readme_images/summary.png)
+
 ---
 
 ## Table of Contents
@@ -76,15 +78,22 @@ data in the Correlation Study notebook, and each is reproduced live on the dashb
 *Validation:* Spearman rank correlation between `mileage` and `price`.
 *Result:* correlation = **−0.51** (p < 0.001) — a clear negative relationship. **Supported.**
 
+![Hypothesis 1 — price falls as mileage rises](readme_images/hypothesis_mileage.png)
+
 **Hypothesis 2 — Newer cars are worth more.**
 *Validation:* Spearman rank correlation between `year` and `price`.
 *Result:* correlation = **+0.60** (p < 0.001) — a strong positive relationship. **Supported.**
+
+![Hypothesis 2 — median price by registration year](readme_images/hypothesis_year.png)
 
 **Hypothesis 3 — Transmission type affects price.**
 *Validation:* a Kruskal–Wallis H-test comparing price across transmission types (the groups are
 non-normal, so a non-parametric test is appropriate).
 *Result:* **H = 35,717 (p < 0.001)** — price differs significantly by transmission. Median price
-rises Manual → Other → Automatic → Semi-Auto. **Supported.**
+rises Manual (£11,000) → Other (£14,749) → Automatic (£19,230) → Semi-Auto (£22,250).
+**Supported.**
+
+![Hypothesis 3 — price by transmission type](readme_images/hypothesis_transmission.png)
 
 All three hypotheses were supported, and the same features (year, mileage, transmission) are
 among the strongest drivers in the prediction model, which corroborates the findings.
@@ -166,11 +175,14 @@ The project follows the CRISP-DM data-mining methodology, with one Jupyter noteb
 ## Dashboard Design
 
 The dashboard is a multi-page Streamlit app with a sidebar navigation menu. It uses a clean
-petrol-blue theme and Plotly for interactive charts.
+petrol-blue theme and Plotly for interactive charts. The sidebar navigation menu lets the
+user move between the five pages:
+
+![Sidebar navigation menu](readme_images/navigation.png)
 
 **Page 1 — Project Summary.** Introduces the project, shows headline dataset metrics (cars
 analysed, manufacturers, price range), states both business requirements, and describes the
-data.
+data. *(Shown at the top of this README.)*
 
 **Page 2 — Price Correlation Study (Business Requirement 1).** Answers BR1 with four chart
 types: a Spearman correlation heatmap, a median-price-by-year line chart, an
@@ -178,16 +190,29 @@ average-price-by-manufacturer bar chart, and an interactive dropdown that plots 
 feature against price (scatter for numeric, box plot for categorical). Closes with the key
 findings for the dealership.
 
+![Price Correlation Study — Spearman heatmap](readme_images/correlation_page.png)
+![Median price by registration year](readme_images/correlation_year.png)
+![Average price by manufacturer](readme_images/correlation_manufacturer.png)
+![Interactive feature explorer](readme_images/correlation_explorer.png)
+
 **Page 3 — Project Hypotheses.** States the three hypotheses, shows the validating statistic
 recomputed live from the data, a "Supported" verdict for each, and a supporting chart.
+*(Charts shown in the Hypotheses section above.)*
 
 **Page 4 — Predict Sale Price (Business Requirement 2).** Input widgets for every feature (the
 Model dropdown filters to the chosen Manufacturer). A "Predict sale price" button returns the
 model's estimated price, with a note on its typical accuracy.
 
+![Predict Sale Price page](readme_images/predictor.png)
+
 **Page 5 — ML Model Performance.** States the success metric and whether it was met, shows
 train and test R²/MAE/RMSE as metric cards, Actual-vs-Predicted scatter plots for both sets,
 the model's feature importances, and the chosen algorithm and best hyperparameters.
+
+![ML Model Performance — success metric and scores](readme_images/performance.png)
+![Actual vs predicted price, train and test](readme_images/performance_actual_vs_predicted.png)
+![Feature importance](readme_images/performance_importance.png)
+![Model and tuning](readme_images/performance_tuning.png)
 
 ---
 
