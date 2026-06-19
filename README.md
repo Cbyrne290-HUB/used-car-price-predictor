@@ -26,6 +26,7 @@ from 97,442 real UK used-car listings to (1) explain which attributes drive a ca
 9. [Deployment](#deployment)
 10. [Main Data Analysis and ML Libraries](#main-data-analysis-and-ml-libraries)
 11. [Credits](#credits)
+12. [Acknowledgements](#acknowledgements)
 
 ---
 
