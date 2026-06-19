@@ -248,6 +248,8 @@ everything it needs at runtime.
 **Running locally:** clone the repo, install dependencies with `pip install -r requirements.txt`,
 then run `streamlit run app.py`.
 
+Note: Heroku has deprecated runtime.txt; this project uses its modern replacement, .python-version, to set Python 3.12.
+
 ---
 
 ## Main Data Analysis and ML Libraries
@@ -275,3 +277,7 @@ then run `streamlit run app.py`.
   documentation.
 
 This project was built for educational purposes as a portfolio project.
+
+## Acknowledgements
+
+Thanks to my Code Institute mentor for their guidance and feedback throughout this project, and to the Code Institute teaching team and assessors for their support.
