@@ -121,6 +121,17 @@ among the strongest drivers in the prediction model, which corroborates the find
 
 ---
 
+## Epics and User Stories
+
+The work was organised into four epics:
+
+- **Epic 1 — Data collection & preparation:** As a developer, I need clean, reliable data so the analysis and model are trustworthy. (Notebooks 1, 2, 4.)
+- **Epic 2 — Analysis & visualisation (BR1):** As a sales manager, I want to see which attributes most affect price so I can justify my pricing. (Correlation Study notebook + dashboard page.)
+- **Epic 3 — Modelling & evaluation (BR2):** As a salesperson, I want an estimated price from a car's details so I can price stock quickly and consistently. (Modelling notebook + predictor page.)
+- **Epic 4 — Dashboard & deployment:** As a user, I want a clear, navigable web app so I can use these tools without technical knowledge. (Streamlit app on Heroku.)
+
+---
+
 ## ML Business Case
 
 **Aim.** Build a model that predicts the sale price of a used car from its attributes.
@@ -225,6 +236,12 @@ There are no known unfixed bugs. During development, the hyperparameter search i
 exhausted the machine's memory when run in parallel and when the winning model was left
 unconstrained; this was resolved by running the search sequentially and by capping tree size,
 which also keeps the deployed model lightweight.
+
+---
+
+## Ethical and Privacy Concerns
+
+The dataset is public-domain (CC0) and contains no personal or identifiable information — only vehicle attributes such as model, year, mileage and price. There are therefore no privacy concerns. The model predicts vehicle prices, not outcomes about people, so there are no fairness or discrimination risks; predictions are a pricing guide to support, not replace, staff judgement.
 
 ---
 
