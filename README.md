@@ -295,7 +295,7 @@ Note: Heroku has deprecated runtime.txt; this project uses its modern replacemen
   (Predictive Analytics specialisation).
 - **Tools and documentation:** scikit-learn, Streamlit, Plotly and Heroku official
   documentation.
-- **Ai Assistance** (Claude by Anthropic) was used as an AI assistant to help write and refine code across the notebooks, the Streamlit dashboard, and the README drafting, under my direction.
+- **Ai Assistance** (Claude by Anthropic) was used as an AI assistant to help draft write and refine code across the notebooks, the Streamlit dashboard, and the README drafting, under my direction.
 
 This project was built for educational purposes as a portfolio project.
 
