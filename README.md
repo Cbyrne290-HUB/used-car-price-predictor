@@ -7,6 +7,7 @@ from 97,442 real UK used-car listings to (1) explain which attributes drive a ca
 **Live app:** https://used-car-price-predictor-cb-b0fa419f68f7.herokuapp.com/
 
 **Repository:** https://github.com/Cbyrne290-HUB/used-car-price-predictor
+
 **Author:** Callum Byrne
 
 ![Used Car Price Predictor — Project Summary page](readme_images/summary.png)
